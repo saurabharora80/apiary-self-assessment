@@ -3,10 +3,16 @@ HOST: http://polls.apiblueprint.org/
 
 # self-assessment
 
++ Trait accept-header
+    + Headers
+        + Accept (application/vnd.hmrc.1.0+json)  
+
 Self assessment APIs
 
 ## Self Employments Collection [/3000037190/2016-17/self-employments]
-
++ Traits
+    +[accept-header]
+    
 ### List All Self Employments [GET]
 
 + Response 501 (application/json)
@@ -22,15 +28,14 @@ You can create a self employment.
 Returns the HAL link to created self employment.
 
 + Request (application/json)
-
+    
         {
             "name": "name",
             "commencementDate": "2016-05-25"
-        }
-    
+        }    
 
 + Response 501 (application/json)
-
+   
    + Body
 
             {
